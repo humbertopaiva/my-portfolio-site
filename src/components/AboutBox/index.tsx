@@ -8,14 +8,14 @@ export const AboutBox = ({ text }: AboutBoxProps) => {
 	return (
 		<Flex
 			direction={"column"}
-			maxW="md"
+			maxW="lg"
 			h="auto"
-			border="1px solid #FFF"
+			border="1px solid #4A5568"
 			borderRadius={"8px"}
 			color="gray.100"
 		>
 			<Flex
-				borderBottom="1px solid #FFF"
+				borderBottom="1px solid #4A5568"
 				p={"1rem 2rem"}
 				justify="space-between"
 				align="center"

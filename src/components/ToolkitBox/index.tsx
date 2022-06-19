@@ -17,10 +17,25 @@ const minW = "100px";
 
 export const ToolKitBox = () => {
 	return (
-		<Flex direction="column" bgColor="gray.600" p={6} align="center">
-			<Heading as="h2" mb={6}>
-				Toolkit
+		<Flex
+			direction="column"
+			bgColor="gray.700"
+			p={6}
+			align="center"
+			borderRadius={6}
+		>
+			<Heading
+				as="h3"
+				fontSize={["3xl"]}
+				mb={6}
+				fontFamily={"Source Code Pro, monospace"}
+				fontWeight="500"
+				color="cyan.600"
+				paddingY={[4, 6]}
+			>
+				//Hard Skills
 			</Heading>
+
 			<Wrap justify={"center"}>
 				<WrapItem minW={minW}>
 					<ToolCard name="HTML 5" icon={AiFillHtml5} />
@@ -29,36 +44,46 @@ export const ToolKitBox = () => {
 				<WrapItem minW={minW}>
 					<ToolCard name="CSS3" icon={DiCss3} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Javascript" icon={SiJavascript} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Typescript" icon={SiTypescript} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="React JS" icon={DiReact} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard
 						name="Styled-Components"
 						icon={SiStyledcomponents}
 					/>
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Redux" icon={SiRedux} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Chakra UI" icon={SiChakraui} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Material UI" icon={SiMaterialui} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Testing Library" icon={SiTestinglibrary} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Git" icon={BiGitBranch} />
 				</WrapItem>
+
 				<WrapItem minW={minW}>
 					<ToolCard name="Github" icon={AiFillGithub} />
 				</WrapItem>

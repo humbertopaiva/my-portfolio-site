@@ -17,7 +17,7 @@ export const ToolCard = ({ name, icon: Icon }: ToolCardProps) => {
 			p={6}
 			fontSize="md"
 			_hover={{
-				color: "teal.400",
+				color: "cyan.400",
 			}}
 			whileHover={{ scale: 1.1 }}
 			transition="0.2s linear"

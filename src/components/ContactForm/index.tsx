@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useToast } from "@chakra-ui/react";
+import { Divider, Heading, Stack, Textarea, useToast } from "@chakra-ui/react";
 
 import {
 	FormErrorMessage,
@@ -9,6 +9,7 @@ import {
 	FormControl,
 	Input,
 	Button,
+	Box,
 } from "@chakra-ui/react";
 
 export const ContactForm = () => {
@@ -52,60 +53,84 @@ export const ContactForm = () => {
 	};
 
 	return (
-		<form ref={form} onSubmit={handleSubmit(onSubmit)}>
-			<FormControl isInvalid={!!errors.name}>
-				<FormLabel htmlFor="name">First name</FormLabel>
-				<Input
-					id="name"
-					placeholder="Digite seu nome"
-					{...register("name", {
-						required: "Campo obrigatório",
-					})}
-				/>
-				<FormErrorMessage>
-					{errors.name && errors.name.message}
-				</FormErrorMessage>
-			</FormControl>
+		<Box w="100%" borderRadius={6} color="gray.50">
+			<Heading as="h3" fontSize="3xl" mb={6}>
+				Email
+			</Heading>
 
-			<FormControl isInvalid={!!errors.email}>
-				<FormLabel htmlFor="email">Seu email</FormLabel>
-				<Input
-					id="email"
-					placeholder="Digite seu email"
-					{...register("email", {
-						required: "Campo obrigatório",
-						pattern: {
-							value: /^\S+@\S+$/i,
-							message: "Digite um email válido",
-						},
-					})}
-				/>
-				<FormErrorMessage>
-					{errors.email && errors.email.message}
-				</FormErrorMessage>
-			</FormControl>
+			<form ref={form} onSubmit={handleSubmit(onSubmit)}>
+				<Stack spacing={4} w="100%">
+					<FormControl isInvalid={!!errors.name} w="100%">
+						<FormLabel htmlFor="name">Seu nome</FormLabel>
+						<Input
+							id="name"
+							placeholder="Digite seu nome"
+							{...register("name", {
+								required: "Campo obrigatório",
+							})}
+							bgColor="gray.700"
+							borderColor={"gray.600"}
+							h={12}
+							w="100%"
+						/>
+						<FormErrorMessage>
+							{errors.name && errors.name.message}
+						</FormErrorMessage>
+					</FormControl>
 
-			<FormControl isInvalid={!!errors.message}>
-				<FormLabel htmlFor="message">Deixe sua mensagem</FormLabel>
-				<Input
-					id="message"
-					placeholder="Deixe a sua mensagem"
-					{...register("message", {
-						required: "Campo obrigatório",
-					})}
-				/>
-				<FormErrorMessage>
-					{errors.message && errors.message.message}
-				</FormErrorMessage>
-			</FormControl>
-			<Button
-				mt={4}
-				colorScheme="teal"
-				isLoading={isSubmitting}
-				type="submit"
-			>
-				Submit
-			</Button>
-		</form>
+					<FormControl isInvalid={!!errors.email} w="100%">
+						<FormLabel htmlFor="email">Seu email</FormLabel>
+						<Input
+							id="email"
+							placeholder="Digite seu email"
+							{...register("email", {
+								required: "Campo obrigatório",
+								pattern: {
+									value: /^\S+@\S+$/i,
+									message: "Digite um email válido",
+								},
+							})}
+							bgColor="gray.700"
+							borderColor={"gray.600"}
+							h={12}
+							w="100%"
+						/>
+						<FormErrorMessage>
+							{errors.email && errors.email.message}
+						</FormErrorMessage>
+					</FormControl>
+
+					<FormControl isInvalid={!!errors.message} w="100%">
+						<FormLabel htmlFor="message">
+							Deixe sua mensagem
+						</FormLabel>
+						<Textarea
+							id="message"
+							placeholder="Deixe a sua mensagem"
+							{...register("message", {
+								required: "Campo obrigatório",
+							})}
+							bgColor="gray.700"
+							borderColor={"gray.600"}
+							h={12}
+							w="100%"
+						/>
+						<FormErrorMessage>
+							{errors.message && errors.message.message}
+						</FormErrorMessage>
+					</FormControl>
+				</Stack>
+				<Button
+					mt={4}
+					colorScheme="cyan"
+					isLoading={isSubmitting}
+					type="submit"
+					w="100%"
+					h={12}
+				>
+					Enviar mensagem
+				</Button>
+			</form>
+		</Box>
 	);
 };

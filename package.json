@@ -9,6 +9,7 @@
     "@emotion/styled": "^11.0.0",
     "@prismicio/client": "^6.6.0",
     "@prismicio/react": "^2.4.2",
+    "@prismicio/types": "^0.1.29",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^14.1.0",

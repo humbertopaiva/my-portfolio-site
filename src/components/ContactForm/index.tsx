@@ -1,4 +1,8 @@
 import { useForm } from "react-hook-form";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useToast } from "@chakra-ui/react";
+
 import {
 	FormErrorMessage,
 	FormLabel,
@@ -7,32 +11,48 @@ import {
 	Button,
 } from "@chakra-ui/react";
 
-interface ContactData {
-	subject: string;
-	name: string;
-	email: string;
-	message: string;
-	[x: string]: any;
-}
-
 export const ContactForm = () => {
+	const form = useRef<HTMLFormElement>(null!);
+	const toast = useToast();
+
 	const {
 		handleSubmit,
 		register,
 		formState: { errors, isSubmitting },
-	} = useForm<ContactData>();
+	} = useForm();
 
-	function onSubmit(values: ContactData) {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				alert(JSON.stringify(values, null, 2));
-				resolve(null);
-			}, 3000);
-		});
-	}
+	const onSubmit = () => {
+		emailjs
+			.sendForm(
+				"gmail_message_service",
+				"template_s4jlzkf",
+				form.current,
+				"XilHcYdxDuoGWVzPR"
+			)
+			.then(
+				(_) => {
+					toast({
+						title: "Email enviado",
+						description: "Seu email foi enviado com sucesso",
+						status: "success",
+						duration: 6000,
+						isClosable: true,
+					});
+				},
+				(_) => {
+					toast({
+						title: "Tente novamente",
+						description: "Falha no envio do email",
+						status: "error",
+						duration: 6000,
+						isClosable: true,
+					});
+				}
+			);
+	};
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form ref={form} onSubmit={handleSubmit(onSubmit)}>
 			<FormControl isInvalid={!!errors.name}>
 				<FormLabel htmlFor="name">First name</FormLabel>
 				<Input
@@ -40,10 +60,6 @@ export const ContactForm = () => {
 					placeholder="Digite seu nome"
 					{...register("name", {
 						required: "Campo obrigatório",
-						minLength: {
-							value: 4,
-							message: "Minimum length should be 4",
-						},
 					})}
 				/>
 				<FormErrorMessage>
@@ -76,10 +92,6 @@ export const ContactForm = () => {
 					placeholder="Deixe a sua mensagem"
 					{...register("message", {
 						required: "Campo obrigatório",
-						minLength: {
-							value: 4,
-							message: "Minimum length should be 4",
-						},
 					})}
 				/>
 				<FormErrorMessage>

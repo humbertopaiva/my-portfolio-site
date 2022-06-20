@@ -8,7 +8,7 @@ import { MdLocationOn } from "react-icons/md";
 
 export const Contact = () => {
 	return (
-		<FullWidthContainer paddingY={16}>
+		<FullWidthContainer paddingY={16} id="contact">
 			<Wrap
 				w="100%"
 				color="gray.50"
@@ -19,7 +19,7 @@ export const Contact = () => {
 				spacing={{ base: 12, lg: 0 }}
 			>
 				<Flex direction={"column"} justify="space-between">
-					<Heading as="h3" color="cyan.400" mb={{ base: 12, lg: 0 }}>
+					<Heading as="h3" color="cyan.500" mb={{ base: 12, lg: 0 }}>
 						Converse comigo
 					</Heading>
 					<Stack spacing={2} w="100%">
@@ -72,6 +72,12 @@ export const Contact = () => {
 								_hover={{
 									color: "cyan.500",
 								}}
+								onClick={() => {
+									window.open(
+										"https://www.linkedin.com/in/des-humbertopaiva/",
+										"_blank"
+									);
+								}}
 							>
 								Linkedin
 							</Button>
@@ -81,13 +87,19 @@ export const Contact = () => {
 								_hover={{
 									color: "cyan.500",
 								}}
+								onClick={() => {
+									window.open(
+										"https://www.github.com/humbertopaiva/",
+										"_blank"
+									);
+								}}
 							>
 								Github
 							</Button>
 						</Stack>
 					</Stack>
 				</Flex>
-				<Box w={["100%", "40%"]}>
+				<Box w={{ base: "100%", sm: "45%" }}>
 					<ContactForm />
 				</Box>
 			</Wrap>

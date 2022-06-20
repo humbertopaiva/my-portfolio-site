@@ -27,6 +27,9 @@ export const PortfolioGallery = () => {
 					justifyContent={index % 2 === 0 ? "" : "end"}
 				>
 					<PortfolioProject
+						slug={project.uid}
+						id={project.id}
+						type={project.type}
 						title={project.data.title[0].text}
 						src={project.data["project-image"].url}
 						isEven={index % 2 === 0 ? true : false}

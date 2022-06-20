@@ -2,18 +2,22 @@ import { Box, Heading, Image, Flex, Button, Divider } from "@chakra-ui/react";
 import { PortfolioProjectProps } from "../index";
 import { motion } from "framer-motion";
 import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
+import { useNavigate } from "react-router-dom";
 
 export const PortfolioThumb = ({
 	src,
 	title,
 	isEven,
+	slug,
 }: PortfolioProjectProps) => {
+	const navigate = useNavigate();
 	return (
 		<>
 			<Flex
 				color={"gray.50"}
 				direction={["column-reverse", isEven ? "row-reverse" : "row"]}
 				alignItems="center"
+				data-aos={isEven ? "fade-left" : "fade-right"}
 			>
 				<Box
 					m={{ base: 4, md: 12 }}
@@ -21,22 +25,29 @@ export const PortfolioThumb = ({
 				>
 					<Heading
 						as="h4"
-						fontSize={"xl"}
+						fontSize={"3xl"}
 						fontWeight={600}
 						color="cyan.600"
 					>
 						{title}
 					</Heading>
-					<Button variant="link">Acessar projeto</Button>
+					<Button
+						variant="link"
+						onClick={() => {
+							navigate(`/projects/${slug}`);
+						}}
+					>
+						Acessar projeto
+					</Button>
 				</Box>
 
 				<Box
 					as={motion.div}
 					whileHover={{ scale: 1.03 }}
 					transition="0.2s linear"
-					minW="300px"
-					w="400px"
+					w="600px"
 					h="250px"
+					mb={6}
 					position={"relative"}
 					boxShadow="dark-lg"
 					borderRadius={6}

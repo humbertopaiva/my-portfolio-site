@@ -13,7 +13,7 @@ export const ToolCard = ({ name, icon: Icon }: ToolCardProps) => {
 			as={motion.div}
 			direction="column"
 			align={"center"}
-			color="cyan.900"
+			color="gray.700"
 			p={6}
 			fontSize="md"
 			_hover={{

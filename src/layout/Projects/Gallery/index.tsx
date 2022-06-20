@@ -1,24 +1,11 @@
-import { Button, Heading, Flex, Box, Divider } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import { FullWidthContainer } from "../../../components/FullWidthContainer";
 import { PortfolioGallery } from "../../../components/PortfolioGallery";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export const MyProjects = () => {
+export const Gallery = () => {
 	return (
 		<FullWidthContainer>
-			<Box pb={12}>
-				<Heading
-					as="h3"
-					fontSize={["3xl"]}
-					mt={12}
-					fontFamily={"Source Code Pro, monospace"}
-					fontWeight="500"
-					color="gray.200"
-					textAlign={"center"}
-				>
-					//Portfólio de projetos
-				</Heading>
-			</Box>
-
 			<PortfolioGallery />
 			<Flex w="100%" justify="center">
 				<Button
@@ -32,8 +19,15 @@ export const MyProjects = () => {
 						bgColor: "cyan.600",
 						color: "gray.700",
 					}}
+					leftIcon={<FaGithub />}
+					onClick={() => {
+						window.open(
+							"https://www.github.com/humbertopaiva/",
+							"_blank"
+						);
+					}}
 				>
-					Ver mais projetos
+					Repositório do Github
 				</Button>
 			</Flex>
 		</FullWidthContainer>

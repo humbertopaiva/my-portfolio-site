@@ -19,7 +19,7 @@ export const Education = () => {
 					<Text color={"gray.500"} mb={2}>
 						Ago/2022
 					</Text>
-					<Heading as="h4" fontSize={"xl"} color="cyan.300" mb={1}>
+					<Heading as="h4" fontSize={"xl"} color="cyan.500" mb={1}>
 						Desenvolvedor Front End
 					</Heading>
 					<Text as="h4" fontSize={"md"} color="cyan.500" mb={4}>
@@ -30,16 +30,17 @@ export const Education = () => {
 						abrange tecnologias além de soft skills necessárias para
 						o mercado de trabalho. Entre as linguagens e tecnologias
 						aprendidas, estão HTML5, CSS3, JavaScript (ES6+), React
+						JS.
 					</Text>
 				</Box>
 				<Box>
 					<Text color={"gray.500"} mb={2}>
 						Ago/2014 - Ago/2018
 					</Text>
-					<Heading as="h4" fontSize={"xl"} color="cyan.300" mb={1}>
+					<Heading as="h4" fontSize={"xl"} color="cyan.600" mb={1}>
 						Bacharelado em Publicidade e Propaganda
 					</Heading>
-					<Text as="h4" fontSize={"md"} color="cyan.500" mb={4}>
+					<Text as="h4" fontSize={"md"} color="cyan.600" mb={4}>
 						UniAcademia Juiz de Fora (MG)
 					</Text>
 				</Box>

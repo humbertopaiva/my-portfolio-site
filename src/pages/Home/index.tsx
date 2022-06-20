@@ -1,26 +1,18 @@
-import {
-	Button,
-	FormControl,
-	Heading,
-	Image,
-	Flex,
-	Text,
-} from "@chakra-ui/react";
-import { AboutBox } from "../../components/AboutBox";
-import { CodeBoxText } from "../../components/CodeBoxText";
-import { FullWidthContainer } from "../../components/FullWidthContainer";
-
-import { ToolKitBox } from "../../components/ToolkitBox";
-import { ContactForm } from "../../components/ContactForm";
-import { PortfolioGallery } from "../../components/PortfolioGallery";
-import { Education } from "../../components/Education";
 import { Hero } from "../../layout/Home/Hero";
 import { About } from "../../layout/Home/About";
 import { HardSkills } from "../../layout/Home/HardSkills";
 import { MyProjects } from "../../layout/Home/MyProjects";
 import { Contact } from "../../layout/Contact";
+import { Footer } from "../../layout/Footer";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Home = () => {
+	useEffect(() => {
+		Aos.init({ duration: 1500 });
+	}, []);
+
 	return (
 		<>
 			<Hero />
@@ -28,16 +20,7 @@ export const Home = () => {
 			<HardSkills />
 			<MyProjects />
 			<Contact />
-			<FullWidthContainer as='footer' textAlign='center'>
-				<Text
-					color={"gray.50"}
-					fontSize={"sm"}
-					display="block"
-					textAlign={"center"}
-				>
-					Criado por Humberto Paiva - 2022
-				</Text>
-			</FullWidthContainer>
+			<Footer />
 		</>
 	);
 };

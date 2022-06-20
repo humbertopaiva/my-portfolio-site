@@ -23,6 +23,7 @@ export const ToolKitBox = () => {
 			p={6}
 			align="center"
 			borderRadius={6}
+			data-aos="flip-down"
 		>
 			<Heading
 				as="h3"

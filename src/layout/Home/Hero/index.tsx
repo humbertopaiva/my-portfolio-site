@@ -32,6 +32,8 @@ export const Hero = () => {
 					as="h2"
 					color={"gray.800"}
 					fontWeight="700"
+					lineHeight={"4rem"}
+					mb={4}
 				>
 					Humberto Paiva
 				</Heading>
@@ -52,12 +54,12 @@ export const Hero = () => {
 					maxW="300px"
 					color="gray.700"
 				>
-					Ajudo a alavancar boas ideias unindo criatividade à
-					tecnologia.
+					Ajudo a alavancar boas ideias com criatividade e tecnologia.
 				</Text>
 				<Button
 					textAlign={"left"}
 					mt={8}
+					mb={8}
 					bgGradient="linear(to-tl, gray.300, cyan.400, pink.200)"
 				>
 					Entre em contato comigo

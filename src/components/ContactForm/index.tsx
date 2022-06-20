@@ -19,6 +19,7 @@ export const ContactForm = () => {
 	const {
 		handleSubmit,
 		register,
+		reset,
 		formState: { errors, isSubmitting },
 	} = useForm();
 
@@ -39,6 +40,7 @@ export const ContactForm = () => {
 						duration: 6000,
 						isClosable: true,
 					});
+					reset();
 				},
 				(_) => {
 					toast({
@@ -53,7 +55,14 @@ export const ContactForm = () => {
 	};
 
 	return (
-		<Box w="100%" borderRadius={6} color="gray.50" bgColor="gray.700" p={4}>
+		<Box
+			minW="300px"
+			borderRadius={6}
+			color="gray.50"
+			bgColor="gray.700"
+			p={6}
+			boxShadow="md"
+		>
 			<Heading as="h3" fontSize="2xl" mb={6}>
 				Email
 			</Heading>
@@ -122,11 +131,14 @@ export const ContactForm = () => {
 				</Stack>
 				<Button
 					mt={4}
-					colorScheme="cyan"
+					bgGradient="linear(to-tl, gray.300, cyan.400, pink.200)"
 					isLoading={isSubmitting}
 					type="submit"
 					w="100%"
 					h={12}
+					_hover={{
+						color: "cyan.900",
+					}}
 				>
 					Enviar mensagem
 				</Button>

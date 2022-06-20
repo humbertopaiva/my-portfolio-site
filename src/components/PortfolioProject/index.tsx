@@ -13,7 +13,7 @@ export const PortfolioProject = ({
 	isEven,
 }: PortfolioProjectProps) => {
 	return (
-		<Wrap justifySelf={"end"}>
+		<Wrap justifySelf={{ base: "start", md: "end" }}>
 			<PortfolioThumb isEven={isEven} src={src} title={title} />
 		</Wrap>
 	);

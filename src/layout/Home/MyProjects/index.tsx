@@ -9,7 +9,7 @@ export const MyProjects = () => {
 				<Heading
 					as="h3"
 					fontSize={["3xl"]}
-					mt={6}
+					mt={12}
 					fontFamily={"Source Code Pro, monospace"}
 					fontWeight="500"
 					color="cyan.600"

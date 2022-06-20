@@ -53,8 +53,8 @@ export const ContactForm = () => {
 	};
 
 	return (
-		<Box w="100%" borderRadius={6} color="gray.50">
-			<Heading as="h3" fontSize="3xl" mb={6}>
+		<Box w="100%" borderRadius={6} color="gray.50" bgColor="gray.700" p={4}>
+			<Heading as="h3" fontSize="2xl" mb={6}>
 				Email
 			</Heading>
 

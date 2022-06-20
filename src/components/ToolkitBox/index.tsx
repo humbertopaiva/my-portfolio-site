@@ -19,7 +19,7 @@ export const ToolKitBox = () => {
 	return (
 		<Flex
 			direction="column"
-			bgColor="gray.700"
+			bgGradient="linear(to-tl, gray.300, cyan.400, pink.200)"
 			p={6}
 			align="center"
 			borderRadius={6}
@@ -30,7 +30,7 @@ export const ToolKitBox = () => {
 				mb={6}
 				fontFamily={"Source Code Pro, monospace"}
 				fontWeight="500"
-				color="cyan.600"
+				color="gray.700"
 				paddingY={[4, 6]}
 			>
 				//Hard Skills

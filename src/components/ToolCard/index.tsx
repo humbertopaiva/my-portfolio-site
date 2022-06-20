@@ -13,17 +13,19 @@ export const ToolCard = ({ name, icon: Icon }: ToolCardProps) => {
 			as={motion.div}
 			direction="column"
 			align={"center"}
-			color="gray.100"
+			color="cyan.900"
 			p={6}
 			fontSize="md"
 			_hover={{
-				color: "cyan.400",
+				color: "gray.800",
 			}}
 			whileHover={{ scale: 1.1 }}
 			transition="0.2s linear"
 		>
 			<Icon fontSize={"50px"} />
-			<Text mt={2}>{name}</Text>
+			<Text mt={2} fontWeight={500}>
+				{name}
+			</Text>
 		</Flex>
 	);
 };

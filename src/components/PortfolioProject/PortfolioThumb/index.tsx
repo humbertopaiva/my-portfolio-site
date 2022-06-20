@@ -11,11 +11,16 @@ export const PortfolioThumb = ({
 	return (
 		<Flex
 			color={"gray.50"}
-			direction={isEven ? "row-reverse" : "row"}
+			direction={["row", isEven ? "row-reverse" : "row"]}
 			alignItems="center"
 		>
 			<Box m={12}>
-				<Heading as="h4" fontWeight={400} color="cyan.600">
+				<Heading
+					as="h4"
+					fontSize={"xl"}
+					fontWeight={600}
+					color="cyan.600"
+				>
 					{title}
 				</Heading>
 				<Button variant="link">Acessar projeto</Button>

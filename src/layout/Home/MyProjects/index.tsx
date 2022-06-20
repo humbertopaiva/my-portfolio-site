@@ -6,10 +6,17 @@ export const MyProjects = () => {
 	return (
 		<FullWidthContainer>
 			<Box pb={12}>
-				<Heading fontSize={"36px"} color="gray.100">
-					Portfólio de projetos
+				<Heading
+					as="h3"
+					fontSize={["3xl"]}
+					mt={6}
+					fontFamily={"Source Code Pro, monospace"}
+					fontWeight="500"
+					color="cyan.600"
+					textAlign={"center"}
+				>
+					//Portfólio de projetos
 				</Heading>
-				<Divider />
 			</Box>
 
 			<PortfolioGallery />

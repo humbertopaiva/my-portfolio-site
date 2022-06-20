@@ -11,7 +11,7 @@ export const FullWidthContainer = ({
 	...rest
 }: FullWidthContainerProps) => {
 	return (
-		<Container minW="100vw" bgColor={"gray.800"} paddingY={8} {...rest}>
+		<Container minW="100vw" bgColor={"gray.800"} paddingY={4} {...rest}>
 			<Wrap
 				margin={"0 auto"}
 				maxW="5xl"

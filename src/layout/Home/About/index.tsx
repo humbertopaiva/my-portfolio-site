@@ -4,7 +4,7 @@ import { FullWidthContainer } from "../../../components/FullWidthContainer";
 
 export const About = () => {
 	return (
-		<FullWidthContainer>
+		<FullWidthContainer paddingY={16}>
 			<AboutBox
 				text="Desde que me formei, em 2018, nunca parei de buscar conhecimento e de
 experimentar as diversas possibilidades que a área de Comunicação Social

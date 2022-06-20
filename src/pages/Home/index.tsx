@@ -1,4 +1,11 @@
-import { Button, FormControl, Heading, Image, Flex } from "@chakra-ui/react";
+import {
+	Button,
+	FormControl,
+	Heading,
+	Image,
+	Flex,
+	Text,
+} from "@chakra-ui/react";
 import { AboutBox } from "../../components/AboutBox";
 import { CodeBoxText } from "../../components/CodeBoxText";
 import { FullWidthContainer } from "../../components/FullWidthContainer";
@@ -21,6 +28,16 @@ export const Home = () => {
 			<HardSkills />
 			<MyProjects />
 			<Contact />
+			<FullWidthContainer as='footer' textAlign='center'>
+				<Text
+					color={"gray.50"}
+					fontSize={"sm"}
+					display="block"
+					textAlign={"center"}
+				>
+					Criado por Humberto Paiva - 2022
+				</Text>
+			</FullWidthContainer>
 		</>
 	);
 };

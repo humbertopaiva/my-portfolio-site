@@ -2,67 +2,72 @@ import { Heading, Flex, Button, Stack, Box, Wrap } from "@chakra-ui/react";
 import { ContactForm } from "../../components/ContactForm";
 import { FullWidthContainer } from "../../components/FullWidthContainer";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { MdLocationOn } from "react-icons/md";
 
 export const Contact = () => {
 	return (
-		<FullWidthContainer>
+		<FullWidthContainer paddingY={16}>
 			<Wrap
 				w="100%"
 				color="gray.50"
-				bgColor={"gray.700"}
 				p={6}
 				justify="space-between"
 				align={"stretch"}
 				borderRadius={4}
 			>
-				<Flex direction={"column"} maxW="300px">
-					<Heading>Entre em contato comigo</Heading>
-					<Button
-						leftIcon={<BsFillTelephoneFill />}
-						borderRadius={2}
-						variant="ghost"
-						color="gray.600"
-						borderColor={"gray.600"}
-						fontSize={"2xl"}
-						minH={"60px"}
-						w={"350px"}
-						p={0}
-						m={0}
-						_hover={{
-							bgColor: "transparent",
-							borderColor: "gray.400",
-							color: "gray.500",
-						}}
-					>
-						(32) 9 8855-5409
-					</Button>
+				<Flex direction={"column"} justify="space-between">
+					<Heading>Converse comigo</Heading>
+					<Stack align={"start"}>
+						<Button
+							leftIcon={<BsFillTelephoneFill />}
+							variant="unstyled"
+							color="cyan.700"
+							fontSize={"lg"}
+							fontWeight={400}
+						>
+							(32) 9 8855-5409
+						</Button>
+						<Button
+							leftIcon={<SiGmail />}
+							variant="unstyled"
+							color="cyan.700"
+							fontSize={"lg"}
+							fontWeight={400}
+						>
+							humbertomoreira93@gmail.com
+						</Button>
+						<Button
+							leftIcon={<MdLocationOn />}
+							variant="unstyled"
+							color="cyan.700"
+							fontSize={"lg"}
+							fontWeight={400}
+						>
+							Lima Duarte (MG)
+						</Button>
+					</Stack>
 
 					<Stack mt={6} justify="space-between">
 						<Stack direction={"row"}>
 							<Button
-								variant={"unstyled"}
-								w="60px"
-								h="60px"
-								bgColor={"gray.400"}
-								display="flex"
-								alignItems={"center"}
-								justifyContent="center"
-								borderRadius={"full"}
+								bgColor="gray.700"
+								leftIcon={<FaLinkedin />}
+								_hover={{
+									color: "cyan.500",
+								}}
 							>
-								<FaLinkedin fontSize={"32px"} />
+								Linkedin
 							</Button>
 							<Button
-								variant={"unstyled"}
-								w="60px"
-								h="60px"
-								bgColor={"gray.400"}
-								display="flex"
-								alignItems={"center"}
-								justifyContent="center"
-								borderRadius={"full"}
+								bgColor="gray.700"
+								leftIcon={<FaGithub />}
+								_hover={{
+									color: "cyan.500",
+								}}
 							>
-								<FaGithub fontSize={"32px"} />
+								Github
 							</Button>
 						</Stack>
 					</Stack>

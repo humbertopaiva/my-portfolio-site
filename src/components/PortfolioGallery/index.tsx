@@ -1,4 +1,4 @@
-import { Container, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Flex, SimpleGrid } from "@chakra-ui/react";
 import { useAllPrismicDocumentsByType } from "@prismicio/react";
 import { PrismicDocument } from "@prismicio/types";
 import { useEffect, useState } from "react";

@@ -8,6 +8,7 @@ import {
 } from "@prismicio/react";
 import { useEffect, useState } from "react";
 import { PrismicDocument } from "@prismicio/types";
+import { Footer } from "../../layout/Footer";
 
 export const Post = () => {
 	const { slug } = useParams();
@@ -26,6 +27,7 @@ export const Post = () => {
 		<>
 			<Heading>{post?.data.title[0].text}</Heading>
 			<Contact />
+			<Footer />
 		</>
 	);
 };

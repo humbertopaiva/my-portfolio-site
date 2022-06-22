@@ -74,7 +74,7 @@ export const MainContent = ({ post }: { post: PrismicDocument }) => {
 							variant={"outline"}
 							onClick={() => {
 								window.open(
-									post?.data["web-link"].url,
+									post?.data["github-link"].url,
 									"_blank"
 								);
 							}}

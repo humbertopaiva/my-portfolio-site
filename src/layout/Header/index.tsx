@@ -1,10 +1,24 @@
-import { Box, Button, Heading, Link, Stack } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { Heading, Stack } from "@chakra-ui/react";
+import { Link } from "./Link";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { FullWidthContainer } from "../../components/FullWidthContainer";
-import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
+import { Link as SmoothLink } from "react-scroll";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
+	const [isActive, setIsActive] = useState<string>("Home");
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	const handleClick = (path: string, pageName: string) => {
+		if (path) navigate(path);
+		setIsActive(pageName);
+	};
+
+	useEffect(() => {
+		if (location.pathname.includes("projects")) setIsActive("Projetos");
+	}, [location.pathname]);
+
 	return (
 		<FullWidthContainer
 			as="header"
@@ -19,47 +33,41 @@ export const Header = () => {
 				align="center"
 				letterSpacing={2}
 				fontWeight={"lighter"}
-				color="gray.500"
+				color={"gray.400"}
 				textTransform={"uppercase"}
 				fontSize={"xs"}
 			>
 				<Link
+					color={isActive === "Home" ? "cyan.600" : "gray.400"}
 					onClick={() => {
-						navigate("/");
+						handleClick("/", "Home");
 					}}
-					_hover={{
-						color: "cyan.400",
-					}}
-				>
-					Home
-				</Link>
+					name="Home"
+				/>
+
 				<Link
+					color={isActive === "Projetos" ? "cyan.600" : "gray.400"}
 					onClick={() => {
-						navigate("/projects");
+						handleClick("/projects", "Projetos");
 					}}
-					_hover={{
-						color: "cyan.400",
-					}}
-				>
-					Projetos
-				</Link>
+					name="Projetos"
+				/>
+
 				<Link
 					as="div"
-					_hover={{
-						color: "cyan.400",
-					}}
-				>
-					<SmoothLink
-						activeClass="active"
-						to="contact"
-						spy={true}
-						smooth={true}
-						offset={-70}
-						duration={500}
-					>
-						Contato
-					</SmoothLink>
-				</Link>
+					children={
+						<SmoothLink
+							activeClass="active"
+							to="contact"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={500}
+						>
+							Contato
+						</SmoothLink>
+					}
+				/>
 			</Stack>
 		</FullWidthContainer>
 	);

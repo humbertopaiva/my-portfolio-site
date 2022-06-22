@@ -1,8 +1,13 @@
 import { Button, Heading, Flex, Box, Divider } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { FullWidthContainer } from "../../../components/FullWidthContainer";
 import { PortfolioGallery } from "../../../components/PortfolioGallery";
+import { useAllPrismicDocumentsByType } from "@prismicio/react";
 
 export const MyProjects = () => {
+	const [projects] = useAllPrismicDocumentsByType("portfolio-article");
+
+	const navigate = useNavigate();
 	return (
 		<FullWidthContainer>
 			<Box pb={12}>
@@ -19,9 +24,10 @@ export const MyProjects = () => {
 				</Heading>
 			</Box>
 
-			<PortfolioGallery />
+			{projects && <PortfolioGallery projectsList={projects} />}
 			<Flex w="100%" justify="center">
 				<Button
+					onClick={() => navigate("/projects")}
 					colorScheme={"cyan"}
 					w="300px"
 					variant={"outline"}

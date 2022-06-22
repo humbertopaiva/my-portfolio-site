@@ -35,6 +35,7 @@ export const PortfolioThumb = ({
 						variant="link"
 						onClick={() => {
 							navigate(`/projects/${uid}`);
+							document.documentElement.scrollTop = 50;
 						}}
 					>
 						Acessar projeto
@@ -45,7 +46,9 @@ export const PortfolioThumb = ({
 					as={motion.div}
 					whileHover={{ scale: 1.03 }}
 					transition="0.2s linear"
-					w="600px"
+					w="100%"
+					minW="300px"
+					maxW="600px"
 					h="250px"
 					mb={6}
 					position={"relative"}
@@ -77,7 +80,7 @@ export const PortfolioThumb = ({
 							bgGradient: `linear(${
 								isEven ? "to-l" : "to-r"
 							}, cyan.600, cyan.800)`,
-							opacity: 0.5,
+							opacity: 0.2,
 						}}
 					>
 						<Image src={src} alt={title} />

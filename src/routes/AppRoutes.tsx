@@ -9,8 +9,8 @@ export const AppRoutes = () => {
 		<BrowserRouter>
 			<Header />
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/projects" element={<Projects />} />
+				<Route path="" element={<Home />} />
+				<Route path="projects" element={<Projects />}></Route>
 				<Route path="/projects/:uid" element={<Post />} />
 			</Routes>
 		</BrowserRouter>

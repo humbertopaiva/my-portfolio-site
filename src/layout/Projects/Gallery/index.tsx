@@ -2,11 +2,26 @@ import { Button, Flex } from "@chakra-ui/react";
 import { FullWidthContainer } from "../../../components/FullWidthContainer";
 import { PortfolioGallery } from "../../../components/PortfolioGallery";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useAllPrismicDocumentsByType } from "@prismicio/react";
+import { PrismicDocument } from "@prismicio/types";
+import { useEffect, useState } from "react";
 
 export const Gallery = () => {
+	const [projectsList, setProjectsList] = useState<PrismicDocument[]>([]);
+	const [projects] = useAllPrismicDocumentsByType("portfolio-article");
+
+	useEffect(() => {
+		if (projects) {
+			setProjectsList(projects);
+			console.log(projects);
+			return;
+		}
+		console.log("FAIOU");
+	}, [projects]);
+
 	return (
 		<FullWidthContainer>
-			<PortfolioGallery />
+			{projectsList && <PortfolioGallery projectsList={projectsList} />}
 			<Flex w="100%" justify="center">
 				<Button
 					colorScheme={"cyan"}

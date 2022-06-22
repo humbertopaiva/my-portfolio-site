@@ -1,7 +1,12 @@
-import { FullWidthContainer } from "../../../components/FullWidthContainer";
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { FullWidthContainer } from "../FullWidthContainer";
 
-export const Title = () => {
+interface PageTitleProps {
+	page: string;
+	title: string;
+}
+
+export const PageTitle = ({ page, title }: PageTitleProps) => {
 	return (
 		<FullWidthContainer>
 			<Box pt={12} mt={12}>
@@ -10,17 +15,16 @@ export const Title = () => {
 					fontFamily={"Source Code Pro, monospace"}
 					fontSize={"lg"}
 				>
-					// Projetos
+					// {page}
 				</Text>
 				<Heading
 					as="h2"
 					fontSize={["5xl"]}
 					fontWeight="700"
 					color="cyan.500"
-					textAlign={"center"}
-					mb={12}
+					mb={10}
 				>
-					Meu portfólio
+					{title}
 				</Heading>
 			</Box>
 		</FullWidthContainer>

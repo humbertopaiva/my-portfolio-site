@@ -11,7 +11,7 @@ export const AppRoutes = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/projects" element={<Projects />} />
-				<Route path="/projects/:slug" element={<Post />} />
+				<Route path="/projects/:uid" element={<Post />} />
 			</Routes>
 		</BrowserRouter>
 	);

@@ -21,14 +21,13 @@ export const PortfolioGallery = () => {
 		<SimpleGrid w="100%">
 			{projectsList?.map((project, index) => (
 				<Flex
-					key={project.id}
+					key={index}
 					mb={4}
 					w="100%"
 					justifyContent={index % 2 === 0 ? "" : "end"}
 				>
 					<PortfolioProject
-						slug={project.uid}
-						id={project.id}
+						uid={project.uid}
 						type={project.type}
 						title={project.data.title[0].text}
 						src={project.data["project-image"].url}

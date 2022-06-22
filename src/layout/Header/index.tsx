@@ -1,4 +1,4 @@
-import { Box, Heading, Link, Stack } from "@chakra-ui/react";
+import { Box, Button, Heading, Link, Stack } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { FullWidthContainer } from "../../components/FullWidthContainer";
 import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
@@ -43,7 +43,8 @@ export const Header = () => {
 				>
 					Projetos
 				</Link>
-				<Box
+				<Link
+					as="div"
 					_hover={{
 						color: "cyan.400",
 					}}
@@ -58,7 +59,7 @@ export const Header = () => {
 					>
 						Contato
 					</SmoothLink>
-				</Box>
+				</Link>
 			</Stack>
 		</FullWidthContainer>
 	);

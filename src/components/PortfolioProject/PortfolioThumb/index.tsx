@@ -1,14 +1,14 @@
 import { Box, Heading, Image, Flex, Button, Divider } from "@chakra-ui/react";
 import { PortfolioProjectProps } from "../index";
 import { motion } from "framer-motion";
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
+
 import { useNavigate } from "react-router-dom";
 
 export const PortfolioThumb = ({
 	src,
 	title,
 	isEven,
-	slug,
+	uid,
 }: PortfolioProjectProps) => {
 	const navigate = useNavigate();
 	return (
@@ -34,7 +34,7 @@ export const PortfolioThumb = ({
 					<Button
 						variant="link"
 						onClick={() => {
-							navigate(`/projects/${slug}`);
+							navigate(`/projects/${uid}`);
 						}}
 					>
 						Acessar projeto

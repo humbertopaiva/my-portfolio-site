@@ -1,4 +1,4 @@
-import { Box, Container, Heading, HeadingProps } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 interface CodeBoxTextProps {
 	text: string;

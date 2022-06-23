@@ -1,20 +1,14 @@
-import {
-	Button,
-	Box,
-	Image,
-	Link,
-	Flex,
-	Wrap,
-	Stack,
-	Divider,
-} from "@chakra-ui/react";
-
+import { Button, Box, Image, Flex, Wrap, Divider } from "@chakra-ui/react";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicDocument } from "@prismicio/types";
 import { FullWidthContainer } from "../../../components/FullWidthContainer";
+import { FaGithub } from "react-icons/fa";
 import "./styles.css";
+import { MdOpenInNew } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export const MainContent = ({ post }: { post: PrismicDocument }) => {
+	const navigate = useNavigate();
 	return (
 		<FullWidthContainer color="gray.50">
 			<Flex
@@ -54,36 +48,52 @@ export const MainContent = ({ post }: { post: PrismicDocument }) => {
 					</Box>
 				</Flex>
 				<Divider />
-				<Wrap justify={"center"} pb={8} bgColor="gray.600">
+				<Wrap justify={"center"} pb={8} bgColor="cyan.500">
 					<Wrap pt={8} justify="center">
-						<Button
-							minW="240px"
-							colorScheme={"cyan"}
-							onClick={() => {
-								window.open(
-									post?.data["web-link"].url,
-									"_blank"
-								);
-							}}
-						>
-							Ver o projeto na web
-						</Button>
-						<Button
-							minW="240px"
-							colorScheme={"cyan"}
-							variant={"outline"}
-							onClick={() => {
-								window.open(
-									post?.data["github-link"].url,
-									"_blank"
-								);
-							}}
-						>
-							Respositório do Github
-						</Button>
+						{post?.data["web-link"].url && (
+							<Button
+								minW="240px"
+								colorScheme={"cyan"}
+								leftIcon={<MdOpenInNew />}
+								onClick={() => {
+									window.open(
+										post?.data["web-link"].url,
+										"_blank"
+									);
+								}}
+							>
+								Ver o projeto na web
+							</Button>
+						)}
+
+						{post?.data["github-link"].url && (
+							<Button
+								minW="240px"
+								colorScheme={"blackAlpha"}
+								leftIcon={<FaGithub />}
+								onClick={() => {
+									window.open(
+										post?.data["github-link"].url,
+										"_blank"
+									);
+								}}
+							>
+								Repositório do Github
+							</Button>
+						)}
 					</Wrap>
 				</Wrap>
 			</Flex>
+			<Box w="100%" textAlign={"center"}>
+				<Button
+					colorScheme={"cyan"}
+					variant="link"
+					mt={4}
+					onClick={() => navigate("/projects")}
+				>
+					Voltar
+				</Button>
+			</Box>
 		</FullWidthContainer>
 	);
 };

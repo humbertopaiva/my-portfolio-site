@@ -5,14 +5,11 @@ import {
 	Image,
 	Button,
 	Box,
-	Divider,
-	Show,
 	Stack,
 } from "@chakra-ui/react";
 import { FullWidthContainer } from "../../../components/FullWidthContainer";
 import avatarImg from "../../../assets/avatar.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 export const Hero = () => {
 	return (
@@ -27,16 +24,18 @@ export const Hero = () => {
 				direction="column"
 				justify={"center"}
 				alignItems="start"
-				zIndex="5000"
+				p={4}
 			>
 				<Heading
 					height={"auto"}
 					fontSize={["5xl", "6xl"]}
+					fontFamily="'Anek Latin', sans-serif"
 					as="h2"
 					color={"cyan.500"}
-					fontWeight="700"
+					fontWeight="600"
 					lineHeight={"3rem"}
 					mb={4}
+					mt={4}
 				>
 					Humberto Paiva
 				</Heading>
@@ -61,7 +60,7 @@ export const Hero = () => {
 					Te ajudo a alavancar boas ideias com criatividade e
 					tecnologia.
 				</Text>
-				<Stack mt={10} mb={12} justify="space-between" color="gray.200">
+				<Stack mt={8} mb={12} justify="space-between" color="gray.200">
 					<Stack direction={"row"}>
 						<Button
 							bgColor="gray.700"

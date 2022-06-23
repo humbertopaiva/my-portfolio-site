@@ -11,7 +11,7 @@ import { client } from "./services/prismic";
 
 const theme = extendTheme({
 	fonts: {
-		heading: `'Raleway', sans-serif`,
+		heading: `'Anek Latin', sans-serif`,
 		body: `'Raleway', sans-serif`,
 	},
 });

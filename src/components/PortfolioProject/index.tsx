@@ -1,4 +1,4 @@
-import { Box, Wrap } from "@chakra-ui/react";
+import { Wrap } from "@chakra-ui/react";
 import { PortfolioThumb } from "./PortfolioThumb";
 
 export interface PortfolioProjectProps {

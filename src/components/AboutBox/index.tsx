@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 
 interface AboutBoxProps {
 	text: string;

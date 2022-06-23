@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
+import { Heading, Stack, Textarea, useToast } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
-import { Divider, Heading, Stack, Textarea, useToast } from "@chakra-ui/react";
 
 import {
 	FormErrorMessage,
@@ -131,14 +131,11 @@ export const ContactForm = () => {
 				</Stack>
 				<Button
 					mt={4}
-					bgGradient="linear(to-tl, gray.300, cyan.400, pink.200)"
+					colorScheme="cyan"
 					isLoading={isSubmitting}
 					type="submit"
 					w="100%"
 					h={12}
-					_hover={{
-						color: "cyan.900",
-					}}
 				>
 					Enviar mensagem
 				</Button>

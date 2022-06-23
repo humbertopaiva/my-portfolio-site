@@ -1,8 +1,8 @@
-import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 
 export const Education = () => {
 	return (
-		<Box maxW="400px">
+		<Box maxW="400px" p={4}>
 			<Heading
 				as="h3"
 				fontSize={["3xl"]}
@@ -14,18 +14,18 @@ export const Education = () => {
 			>
 				Formação {"{"}
 			</Heading>
-			<Stack spacing={8}>
+			<Stack spacing={4}>
 				<Box>
 					<Text color={"gray.500"} mb={2}>
-						Ago/2022
+						Nov/2021 - Ago/2022
 					</Text>
-					<Heading as="h4" fontSize={"xl"} color="cyan.500" mb={1}>
+					<Heading as="h4" fontSize={"xl"} color="cyan.500">
 						Desenvolvedor Front End
 					</Heading>
 					<Text as="h4" fontSize={"md"} color="cyan.500" mb={4}>
 						Kenzie Academy Brasil
 					</Text>
-					<Text color="gray.400">
+					<Text color="gray.400" w="90%">
 						Curso de 1.000 horas de Desenvolvimento Front-End que
 						abrange tecnologias além de soft skills necessárias para
 						o mercado de trabalho. Entre as linguagens e tecnologias
@@ -48,7 +48,6 @@ export const Education = () => {
 			<Heading
 				as="h3"
 				fontSize={["3xl"]}
-				mb={6}
 				fontFamily={"Source Code Pro, monospace"}
 				fontWeight="500"
 				color="gray.300"

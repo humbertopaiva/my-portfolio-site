@@ -1,7 +1,6 @@
 import { Box, Heading, Image, Flex, Button, Divider } from "@chakra-ui/react";
 import { PortfolioProjectProps } from "../index";
 import { motion } from "framer-motion";
-
 import { useNavigate } from "react-router-dom";
 
 export const PortfolioThumb = ({
@@ -11,6 +10,10 @@ export const PortfolioThumb = ({
 	uid,
 }: PortfolioProjectProps) => {
 	const navigate = useNavigate();
+	const handleClick = () => {
+		navigate(`/projects/${uid}`);
+		document.documentElement.scrollTop = 50;
+	};
 	return (
 		<>
 			<Flex
@@ -33,13 +36,7 @@ export const PortfolioThumb = ({
 					>
 						{title}
 					</Heading>
-					<Button
-						variant="link"
-						onClick={() => {
-							navigate(`/projects/${uid}`);
-							document.documentElement.scrollTop = 50;
-						}}
-					>
+					<Button variant="link" onClick={handleClick}>
 						Acessar projeto
 					</Button>
 				</Box>
@@ -54,11 +51,13 @@ export const PortfolioThumb = ({
 					boxShadow="dark-lg"
 					borderRadius={4}
 					opacity={0.8}
+					bgColor="gray.300"
+					overflow={"hidden"}
+					cursor="pointer"
 					_hover={{
 						opacity: 1,
 					}}
-					bgColor="gray.300"
-					overflow={"hidden"}
+					onClick={handleClick}
 				>
 					<Image
 						objectFit={"cover"}

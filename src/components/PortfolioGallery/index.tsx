@@ -17,9 +17,9 @@ export const PortfolioGallery = ({
 				projectsList.map((project, index) => (
 					<Flex
 						key={index}
-						mb={4}
+						mb={6}
 						w="100%"
-						justifyContent={index % 2 === 0 ? "" : "end"}
+						justifyContent={["start", index % 2 === 0 ? "" : "end"]}
 					>
 						<PortfolioProject
 							uid={project.uid}

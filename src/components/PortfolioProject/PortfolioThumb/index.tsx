@@ -16,16 +16,18 @@ export const PortfolioThumb = ({
 			<Flex
 				color={"gray.50"}
 				direction={["column-reverse", isEven ? "row-reverse" : "row"]}
-				alignItems="center"
+				alignItems={["start", "center"]}
 				data-aos={isEven ? "fade-left" : "fade-right"}
+				w="100%"
 			>
 				<Box
-					m={{ base: 4, md: 12 }}
-					w={{ base: "100%", md: "inherit" }}
+					m={{ base: 6, md: 12 }}
+					w={["100%", "50%"]}
+					textAlign={["left", isEven ? "left" : "right"]}
 				>
 					<Heading
 						as="h4"
-						fontSize={"3xl"}
+						fontSize={["2xl", "3xl"]}
 						fontWeight={600}
 						color="cyan.600"
 					>
@@ -47,44 +49,23 @@ export const PortfolioThumb = ({
 					whileHover={{ scale: 1.03 }}
 					transition="0.2s linear"
 					w="100%"
-					minW="300px"
-					maxW="600px"
-					h="250px"
-					mb={6}
+					h={["200px", "280px"]}
 					position={"relative"}
 					boxShadow="dark-lg"
-					borderRadius={6}
-					bgGradient={`linear(${
-						isEven ? "to-r" : "to-l"
-					}, gray.300, cyan.400, pink.200)`}
-					opacity={0.7}
+					borderRadius={4}
+					opacity={0.8}
 					_hover={{
 						opacity: 1,
 					}}
+					bgColor="gray.300"
+					overflow={"hidden"}
 				>
-					<Box
-						w="100%"
-						h="100%"
-						position={"absolute"}
-						bottom={1}
-						overflow="hidden"
-						borderRadius={6}
-						_before={{
-							position: "absolute",
-							left: 0,
-							bottom: 0,
-							top: 0,
-							width: "100%",
-							height: "100%",
-							content: "''",
-							bgGradient: `linear(${
-								isEven ? "to-l" : "to-r"
-							}, cyan.600, cyan.800)`,
-							opacity: 0.2,
-						}}
-					>
-						<Image src={src} alt={title} />
-					</Box>
+					<Image
+						objectFit={"cover"}
+						boxSize="100%"
+						src={src}
+						alt={title}
+					/>
 				</Box>
 			</Flex>
 		</>

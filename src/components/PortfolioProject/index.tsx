@@ -17,7 +17,7 @@ export const PortfolioProject = ({
 	type,
 }: PortfolioProjectProps) => {
 	return (
-		<Wrap justifySelf={{ base: "start", md: "end" }}>
+		<Wrap justifySelf={{ base: "start", md: "end" }} w="100%">
 			<PortfolioThumb
 				uid={uid}
 				type={type}

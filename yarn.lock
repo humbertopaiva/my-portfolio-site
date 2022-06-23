@@ -1868,6 +1868,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.10.tgz#c4269c54d6f5f8661322facb5946d8188fadc7f2"
   integrity sha512-MrtTDfWb1Tu9YxVh2KaKmsKBn6O3KL/lHZS0KRKK58jgqvdwuiDt4QW4udmW4FQf0XOWgnZ+4vKUF80F3SqBAA==
 
+"@fontsource/prompt@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/prompt/-/prompt-4.5.8.tgz#129f14f2d403fa44633d46f6891fc2fc5b5a2a13"
+  integrity sha512-Ddb1cq7nZlG+VIN25bpmrAFboZq1R6QbutKYUB6sRWE0w4ZWKjRmys1IxW2GV0QIQ476wUTDx/6T2s3we2XKPw==
+
 "@fontsource/raleway@^4.5.9":
   version "4.5.9"
   resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.9.tgz#850cf0bf4e0ba624210d60b13337108d9bffbb76"

@@ -13,10 +13,8 @@ export const Gallery = () => {
 	useEffect(() => {
 		if (projects) {
 			setProjectsList(projects);
-			console.log(projects);
 			return;
 		}
-		console.log("FAIOU");
 	}, [projects]);
 
 	return (

@@ -9,6 +9,7 @@
     "@emotion/styled": "^11.0.0",
     "@fontsource/anek-latin": "^4.5.1",
     "@fontsource/open-sans": "^4.5.10",
+    "@fontsource/prompt": "^4.5.8",
     "@fontsource/raleway": "^4.5.9",
     "@prismicio/client": "^6.6.0",
     "@prismicio/react": "^2.4.2",

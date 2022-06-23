@@ -21,7 +21,7 @@ export const AboutBox = ({ text }: AboutBoxProps) => {
 				align="center"
 			>
 				<Heading as="h3" fontSize={"2xl"}>
-					About
+					Sobre
 				</Heading>
 				<Stack direction={"row"}>
 					<Box

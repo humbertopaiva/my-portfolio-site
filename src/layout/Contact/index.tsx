@@ -29,10 +29,16 @@ export const Contact = () => {
 							color="gray.300"
 							fontSize={"lg"}
 							fontWeight={400}
+							textAlign="left"
 							_hover={{
 								color: "cyan.500",
 							}}
-							textAlign="left"
+							onClick={() => {
+								window.open(
+									"https://api.whatsapp.com/send?phone=5532988555409",
+									"_blank"
+								);
+							}}
 						>
 							(32) 9 8855-5409
 						</Button>

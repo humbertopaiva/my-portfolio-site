@@ -1,9 +1,10 @@
-import { Heading, Stack, Hide, Show } from "@chakra-ui/react";
+import { Heading, Stack, Hide, Show, useDisclosure } from "@chakra-ui/react";
 import { FullWidthContainer } from "../../components/FullWidthContainer";
 import { NavMenu } from "./NavMenu";
 import { DrawerMenu } from "./DrawerMenu";
 
 export const Header = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<FullWidthContainer
 			as="header"
@@ -20,18 +21,17 @@ export const Header = () => {
 					direction={"row"}
 					align="center"
 					letterSpacing={2}
-					fontWeight={"lighter"}
 					color={"gray.400"}
 					textTransform={"uppercase"}
 					fontSize={"xs"}
 				>
-					<NavMenu />
+					<NavMenu onClose={onClose} />
 				</Stack>
 			</Hide>
 
 			{/* DRAWER MENU */}
 			<Show below="md">
-				<DrawerMenu />
+				<DrawerMenu isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
 			</Show>
 		</FullWidthContainer>
 	);

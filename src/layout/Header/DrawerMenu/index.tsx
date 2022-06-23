@@ -14,9 +14,13 @@ import {
 import { AiOutlineMenu } from "react-icons/ai";
 import { NavMenu } from "../NavMenu";
 
-export const DrawerMenu = () => {
-	const { isOpen, onOpen, onClose } = useDisclosure();
+interface DrawerMenuProps {
+	isOpen: boolean;
+	onOpen: () => void;
+	onClose: () => void;
+}
 
+export const DrawerMenu = ({ isOpen, onOpen, onClose }: DrawerMenuProps) => {
 	return (
 		<>
 			<IconButton
@@ -28,7 +32,6 @@ export const DrawerMenu = () => {
 				icon={<AiOutlineMenu />}
 				onClick={() => {
 					onOpen();
-					console.log(isOpen);
 				}}
 				_focus={{
 					bgColor: "transparent",
@@ -58,7 +61,7 @@ export const DrawerMenu = () => {
 							textTransform={"uppercase"}
 							fontSize={"xs"}
 						>
-							<NavMenu />
+							<NavMenu onClose={onClose} />
 						</Stack>
 					</DrawerBody>
 				</DrawerContent>

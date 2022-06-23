@@ -95,7 +95,7 @@ export const Hero = () => {
 					</Stack>
 				</Stack>
 			</Flex>
-			<Box maxW="400px">
+			<Box maxW="400px" mb={4}>
 				<Image
 					alt="my profile pic"
 					src={avatarImg}

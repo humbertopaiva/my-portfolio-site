@@ -4,9 +4,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "../Link";
 import { Link as SmoothLink } from "react-scroll";
 
-export const NavMenu = () => {
+export const NavMenu = ({ onClose }: { onClose: () => void }) => {
 	const [isActive, setIsActive] = useState<string>("Home");
-	const { onClose } = useDisclosure();
+
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -48,6 +48,7 @@ export const NavMenu = () => {
 						smooth={true}
 						offset={-70}
 						duration={500}
+						onClick={() => onClose()}
 					>
 						Contato
 					</SmoothLink>

@@ -6,9 +6,14 @@ import { FaGithub } from "react-icons/fa";
 import "./styles.css";
 import { MdOpenInNew } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export const MainContent = ({ post }: { post: PrismicDocument }) => {
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		console.log(post);
+	}, [post]);
 	return (
 		<FullWidthContainer color="gray.50">
 			<Flex
@@ -26,16 +31,17 @@ export const MainContent = ({ post }: { post: PrismicDocument }) => {
 					/>
 				</Box>
 				<Flex p={8} mt={[0, 4]} direction={["column-reverse", "row"]}>
-					<Box maxW={["100%", "50%"]}>
-						<Image
-							w="100%"
-							objectFit="cover"
-							alt="mockup"
-							src={
-								"https://www.pngmart.com/files/4/Apple-Computer-PNG-Pic.png"
-							}
-						/>
-					</Box>
+					{post?.data["mockup"] && (
+						<Box maxW={["100%", "50%"]}>
+							<Image
+								w="100%"
+								objectFit="cover"
+								alt="mockup"
+								src={post?.data["mockup"]?.url}
+							/>
+						</Box>
+					)}
+
 					<Box
 						maxW={["100%", "50%"]}
 						pl={[0, 12]}

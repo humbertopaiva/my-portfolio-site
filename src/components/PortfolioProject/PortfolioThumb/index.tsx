@@ -24,7 +24,8 @@ export const PortfolioThumb = ({
 				w="100%"
 			>
 				<Box
-					m={{ base: 6, md: 12 }}
+					m={{ base: 0, md: 12 }}
+					pt={4}
 					w={["100%", "50%"]}
 					textAlign={["left", isEven ? "left" : "right"]}
 				>

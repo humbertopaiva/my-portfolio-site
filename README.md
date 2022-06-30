@@ -8,6 +8,12 @@ Neste meu portfólio de projetos, procurei implementar boa parte dos meus conhec
 
 <a href="https://humbertopaiva.des.br/" target="_blank">https://humbertopaiva.des.br/</a>
 
+
+### Features
+
+- Integração com Email JS para envio de mala direta para o meu email pessoal, através do formulário de contato
+- Integração com o Prismic CMS para atualizar o site de forma automática, buscando conteúdos cadastrados via API
+
 ### Tecnologias usadas
 
 ![image](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
@@ -18,6 +24,10 @@ Neste meu portfólio de projetos, procurei implementar boa parte dos meus conhec
 ![image](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![image](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
 ![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+[v] Email JS
+[v] Prismic 
+[v] Context API
 
 
 
@@ -37,10 +47,5 @@ ou
 
 ```
 npm start 
-```
-
-Windows:
-```
-<comando_de_instalação>
 ```
 

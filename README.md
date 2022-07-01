@@ -37,15 +37,13 @@ Para instalar o projeto em sua máquina, siga estas etapas:
 
 1 - Clone o repositório para o seu computador
 
-2 - Inicialize o repositório e execute o comando
+2 - Inicialize o repositório e execute os comandos em sequência:
+
+```
+yarn install
+```
 
 ```
 yarn start 
-```
-
-ou
-
-```
-npm start 
 ```
 

@@ -45,6 +45,7 @@ export const MainContent = ({ post }: { post: PrismicDocument }) => {
 					<Box
 						maxW={["100%", "50%"]}
 						pl={[0, 12]}
+						mb={6}
 						color="gray.200"
 						fontWeight={"light"}
 					>

@@ -6,6 +6,7 @@ import {
 	Button,
 	Box,
 	Stack,
+	Wrap,
 } from "@chakra-ui/react";
 import { FullWidthContainer } from "../../../components/FullWidthContainer";
 import avatarImg from "../../../assets/avatar.png";
@@ -20,21 +21,20 @@ export const Hero = () => {
 			alignItems="center"
 		>
 			<Flex
-				maxW="500px"
+				maxW="600px"
 				direction="column"
 				justify={"center"}
 				alignItems="start"
 				p={4}
 			>
 				<Heading
+					as="h1"
 					height={"auto"}
-					fontSize={["5xl", "6xl"]}
+					fontSize={["5xl", "7xl"]}
 					fontFamily="'Anek Latin', sans-serif"
-					as="h2"
 					color={"cyan.500"}
 					fontWeight="600"
-					lineHeight={"3rem"}
-					mb={4}
+					lineHeight={{ base: "3rem", md: "6rem" }}
 					mt={4}
 				>
 					Humberto Paiva
@@ -51,18 +51,19 @@ export const Hero = () => {
 				</Heading>
 
 				<Text
-					fontSize={"large"}
+					fontSize={"2xl"}
 					fontWeight={400}
 					mt={2}
-					maxW="300px"
+					maxW={["100%", "80%"]}
 					color="gray.500"
 				>
 					Te ajudo a alavancar boas ideias com criatividade e
 					tecnologia.
 				</Text>
-				<Stack mt={8} mb={12} justify="space-between" color="gray.200">
+				<Wrap mt={8} mb={8} color="gray.200">
 					<Stack direction={"row"}>
 						<Button
+							minW={"150px"}
 							bgColor="gray.700"
 							leftIcon={<FaLinkedin />}
 							_hover={{
@@ -78,6 +79,7 @@ export const Hero = () => {
 							Linkedin
 						</Button>
 						<Button
+							minW={"150px"}
 							bgColor="gray.700"
 							leftIcon={<FaGithub />}
 							_hover={{
@@ -93,7 +95,7 @@ export const Hero = () => {
 							Github
 						</Button>
 					</Stack>
-				</Stack>
+				</Wrap>
 			</Flex>
 			<Box maxW="400px" mb={4}>
 				<Image
@@ -101,6 +103,7 @@ export const Hero = () => {
 					src={avatarImg}
 					objectFit={"cover"}
 					w="100%"
+					p={4}
 				></Image>
 			</Box>
 		</FullWidthContainer>

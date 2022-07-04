@@ -24,7 +24,9 @@ export const MyProjects = () => {
 				</Heading>
 			</Box>
 
-			{projects && <PortfolioGallery projectsList={projects} />}
+			{projects && (
+				<PortfolioGallery projectsList={projects.splice(-2)} />
+			)}
 			<Flex w="100%" justify="center">
 				<Button
 					onClick={() => navigate("/projects")}

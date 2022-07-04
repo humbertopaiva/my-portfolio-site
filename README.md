@@ -1,19 +1,18 @@
-# Desafio - Criando um front-end totalmente componentizado com React JS
+# Portfólio de Projetos - Humberto Paiva
 
-<img src="https://images.prismic.io/humbertopaiva-portfolio/ddbbfb1f-a68b-413d-b27e-3fde690c83bd_tp238-pf-s73-05-mockup.jpg?auto=compress,format" alt="mockup projeto">
+<img src="https://images.prismic.io/humbertopaiva-portfolio/bf9a3811-d205-4bb2-a899-592fbdbd6c6b_02_laptop_screen_mockup.jpg?auto=compress,format" alt="mockup projeto">
 
-Desafio sugerido pela Digital Inovation One, para o bootcamp da Impulso Javascript Evolution. Nele, construí uma aplicação utilizando a API de busca do Github para buscar usuários e listar seus repositórios.
+Neste meu portfólio de projetos, procurei implementar boa parte dos meus conhecimentos de Desenvolvimento Front-End acumulados nos últimos meses. Nele, pude aplicar algumas das tecnologias exigidas no mercado de trabalho, atualmente, e será um projeto que estarei sempre aperfeiçoando, afinal, é uma das minhas pontes de contato com o mercado de trabalho. 
 
-## Demo do projeto
+## Acesse o portfólio
 
-<a href="https://dio-github-search-interface.vercel.app/" target="_blank">Clique aqui para ver a demo</a>
+<a href="https://humbertopaiva.des.br/" target="_blank">https://humbertopaiva.des.br/</a>
 
 
 ### Features
 
-- Consulta de usuários por nome, via API de buscas do Github
-- Listagem de repositórios dos usuários encontrados
-- Link de acesso para os repositórios listados
+- Integração com Email JS para envio de mala direta para o meu email pessoal, através do formulário de contato
+- Integração com o Prismic CMS para atualizar o site de forma automática, buscando conteúdos cadastrados via API
 
 ### Tecnologias usadas
 
@@ -22,10 +21,14 @@ Desafio sugerido pela Digital Inovation One, para o bootcamp da Impulso Javascri
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![image](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
 ![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-[Context API] [Styled-Components] 
+[Email JS] 
+[Prismic ] 
+[Context API] 
+
 
 
 ## 🚀 Rodando o projeto na sua máquina
